@@ -34,6 +34,9 @@ gem 'devise', '~> 3.2.2'
 # Paperclip Gem
 gem 'paperclip', '~> 3.0'
 
+# AWS Gem
+gem 'aws-sdk', '~> 1.32.0'
+
 group :development, :test do
 # By default, sqlite3 is the database for Active Record
 	gem 'sqlite3'
