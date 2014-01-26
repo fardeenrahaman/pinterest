@@ -21,6 +21,7 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem  'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -36,6 +37,9 @@ gem 'paperclip', '~> 3.0'
 
 # AWS Gem
 gem 'aws-sdk', '~> 1.32.0'
+
+# Masonry Gem
+gem 'masonry-rails', '~> 0.2.1'
 
 group :development, :test do
 # By default, sqlite3 is the database for Active Record
