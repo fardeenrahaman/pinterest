@@ -41,6 +41,10 @@ gem 'aws-sdk', '~> 1.32.0'
 # Masonry Gem
 gem 'masonry-rails', '~> 0.2.1'
 
+# Paginate Gem
+gem 'will_paginate', '~> 3.0.5'
+gem 'will_paginate-bootstrap', '~> 1.0.0'
+
 group :development, :test do
 # By default, sqlite3 is the database for Active Record
 	gem 'sqlite3'
