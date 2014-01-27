@@ -8,19 +8,50 @@
       <span class="icon-bar"></span>
     </button>
     <%= link_to "PetPins", root_path, class: "navbar-brand" %>
+    
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <!-- <div class="collapse navbar-collapse navbar-ex1-collapse"> -->
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
+      <li>
+        <%= link_to root_path do %>
+          <button type="button" class="btn btn-default navbar-btn">Home</button>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to about_path do %>
+          <button type="button" class="btn btn-default navbar-btn">About</button>
+        <% end %>
+      </li>
+
       <% if user_signed_in? %>
-        <li><%= link_to 'New Pin', new_pin_path %></li>
-        <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-        <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-      <% end %>
+        <li>
+          <%= link_to new_pin_path do %>
+            <button type="button" class="btn btn-default navbar-btn">
+            <span class="glyphicon glyphicon-plus"></span>New Pin</button>
+          <% end %>
+        </li>
+        
+        <li>
+          <%= link_to edit_user_registration_path do %>
+            <button type="button" class="btn btn-default navbar-btn">
+              Account Settings
+            </button>
+          <% end %>
+        </li>
+        
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <button type="button" class="btn btn-default navbar-btn">
+              Log Out
+            </button>
+          <% end %>
+        </li>
+      
+      <% end %><!-- end for if statement -->
     </ul>
   </div><!-- /.container -->
 </nav>
